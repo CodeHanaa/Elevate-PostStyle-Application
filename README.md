@@ -28,7 +28,7 @@ This application serves as a dynamic post management dashboard where users can b
 
 1.  **Clone the repository:**
     ```bash
-    git clone [حطي لينك الريبوزيتوري بتاعك هنا]
+    git clone [https://github.com/CodeHanaa/Elevate-PostStyle-Application.git]
     ```
 
 2.  **Install dependencies:**
