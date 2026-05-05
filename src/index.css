@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* تعديل خلفية الـ body */
+body {
+    /* المسار بيبدأ من جذر مجلد public، فبنكتب / واسم الصورة علطول */
+    background-image: url('../src/assets/bg.jpg'); 
+    
+    /* إعدادات إضافية عشان الصورة تملأ الشاشة وتثبت */
+    background-size: cover;      /* تخلي الصورة تغطي الـ body كله دون تشويه */
+    background-position: center;  /* تسنتر الصورة في النص */
+    background-repeat: no-repeat; /* تمنع تكرار الصورة */
+    background-attachment: fixed; /* تخلي الخلفية ثابتة والكلام بيتحرك فوقها */
+    
+    /* تأكدي إن الـ html والـ body واخدين الارتفاع الكامل */
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* الكود القديم بتاعك للصور الداخلية جوه البودي سيبيه زي ما هو */
+body {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
