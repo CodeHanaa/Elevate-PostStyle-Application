@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+#  Elevate - PostStyle Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** [ لينك الـ Vercel هنا]
 
-Currently, two official plugins are available:
+A professional, high-performance ReactJS application built as part of the **Elevate Frontend Advanced Bootcamp**. This project implements a real-world social feed experience with a focus on pixel-perfect UI, clean architecture, and robust form management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Project Overview
+This application serves as a dynamic post management dashboard where users can browse, view, and create posts. It integrates with the **JSONPlaceholder API** for data fetching and implements local persistence using `LocalStorage` to ensure a seamless user experience even after page refreshes.
 
-## React Compiler
+## Tech Stack
+* **Core:** React 18+ (Vite)
+* **Styling:** Tailwind CSS (Pixel-perfect implementation)
+* **Navigation:** React Router DOM
+* **Form Management:** React Hook Form
+* **Validation:** Zod Schema Validation
+* **Icons:** Lucide React
+* **API Client:** Axios
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
+* **Pixel-Perfect Implementation:** Strictly followed the provided Figma design for every screen and state.
+* **Persistent Data:** Integrated `LocalStorage` to maintain new posts across sessions.
+* **Advanced Validation:** Real-time form validation with descriptive error messages using React Hook Form and Zod.
+* **Loading & Error States:** Graceful handling of API fetch states, including customized loaders and server error feedback.
+* **Responsive Design:** Fully optimized for mobile, tablet, and desktop views.
+* **Toast Notifications:** Instant feedback for user actions like publishing or errors.
 
-## Expanding the ESLint configuration
+## Installation & Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  **Clone the repository:**
+    ```bash
+    git clone [حطي لينك الريبوزيتوري بتاعك هنا]
+    ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3.  **Run the project locally:**
+    ```bash
+    npm run dev
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Project Structure
+```text
+src/
+├── components/     # Reusable UI components (Header, PostCard, etc.)
+├── Pages/          # Main application pages (Home, CreatePost, PostDetails)
+├── services/       # API services (getUsers, getPosts)
+├── Types/          # TypeScript interfaces and post types
+├── App.tsx         # Root component with Routing and State logic
+└── main.tsx        # Entry point
